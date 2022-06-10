@@ -1,50 +1,59 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
+    <title>Contact</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
-    <title>form</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
 </head>
 <body>
-    <h1>
-        Contact
-    </h1>
-    <form action="process-form.php" method="post">
-        <label for="Name">Name</label> 
-        <input type="text" id="Name" name="name">
 
-        <label for="message">message</label>
+    <h1>Contact</h1>
+
+    <form action="process-form.php" method="post">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="message">Message</label>
         <textarea id="message" name="message"></textarea>
 
         <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+            <option value="1">Low</option>
+            <option value="2" selected>Medium</option>
+            <option value="3">High</option>
+        </select>
 
-            <select id="priority" name="priority">
-                <option value="1">Low</option>
-                <option value="2" selected>Medium</option>
-                <option value="3">High</option>
-            </select>
         <fieldset>
             <legend>Type</legend>
+
             <label>
                 <input type="radio" name="type" value="1" checked>
                 Complaint
-            </label> 
+            </label>
 
             <br>
 
             <label>
-             <input type="radio" name="type" value="2">
-             Suggestion
+                <input type="radio" name="type" value="2">
+                Suggestion
             </label>
-    </fieldset>
-    <label>
-        <input type="checkbox" name="terms">
-        I agree to the terms and conditions
-    </label>
-    <br>
-    <button>Send</button>
+
+        </fieldset>
+
+        <label>
+            <input type="checkbox" name="terms">
+            I agree to the terms and conditions
+        </label>
+
+        <br>
+
+        <button style="background-color: #FBB03A; color:white">Send</button>
+        <!-- <button style="background-color: #E37134; color:white">Afficher</button>
+        <button style="background-color: #FA5146; color:white">Modifier</button> -->
+
     </form>
+
 </body>
 </html>
