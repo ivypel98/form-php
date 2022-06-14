@@ -3,7 +3,7 @@
 $name = $_POST["name"];
 $message = $_POST["message"];
 $priority = filter_input(INPUT_POST, "priority", FILTER_VALIDATE_INT);
-$type = filter_input(INPUT_POST, "priority", FILTER_VALIDATE_INT);
+$type = filter_input(INPUT_POST, "type", FILTER_VALIDATE_INT);
 $terms = filter_input(INPUT_POST, "terms", FILTER_VALIDATE_BOOL);
 
 if (! $terms) {
@@ -56,7 +56,7 @@ echo "Record saved !";
     <body>
         <div class="container" style="margin-top: 50px;">
             <button style="background-color: #FBB03A; color:white"><a href="form.html" style="color:white"> Go back</a></button>
-            <button style="background-color: #E37134; color:white" type="submit"><a href="process1-form.php" style="color:white">look </a></button>
+            <button style="background-color: #E37134; color:white" type="submit"><a href="process1-form.php" style="color:white">Check</a></button>
         </div> 
     </body>
     </html>

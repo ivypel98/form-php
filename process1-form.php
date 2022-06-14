@@ -10,6 +10,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+          <style>
+            .d-flex{display:flex;}
+          </style>
     </head>
     <body>
         <div class="container" style="margin-top: 50px;">
@@ -51,23 +54,22 @@
                  $body=$row['body'];
                  $priority=$row['priority'];
                  $type=$row['type'];
-                 echo ' <tbody>
+                 echo ' 
                  <tr>
                      <td>'.$id.'</td>
                      <td>'.$name.'</td>
                      <td>'.$body.'</td>
                      <td>'.$priority.'</td>
                      <td>'.$type.' </td>
-                 </tr>
-                        </tbody>';
+                     <td class="d-flex">
+                     <button><a href="update.php? updateid='.$id.'">Update</a></button>
+                     <button><a href="delete.php? deleteid='.$id.'">Delete</a></button>
+                     </td>
+                 </tr>'
+                    ;
                 }
             }
             ?>
-
-                        <td>
-                            <button><a href=""></a></button>
-                            <button><a href=""></a></button>
-                        </td>
                         <!-- <tr>
                          <td>
                          </td>
